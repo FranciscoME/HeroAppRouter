@@ -8,7 +8,7 @@ import  {DcScreen}  from '../components/dc/DcScreen';
 import { MarvelScreen } from '../components/marvel/MarvelScreen';
 import { SearchScreen } from '../components/search/SearchScreen';
 
-export const DashboardRoutes = () => {
+export const DashboardRoutes = () => {//extraeremos el history para enviarsela al NavBar
     return (
         <>
             <Navbar />

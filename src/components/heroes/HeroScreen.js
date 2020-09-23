@@ -1,8 +1,8 @@
-import React,{useMemo} from 'react'
+import React, { useMemo } from 'react'
 import { Redirect, useParams } from 'react-router-dom';
 import { getHeroesById } from '../../selectors/getHeroesById';
 
-export const HeroScreen = ({history}) => {
+export const HeroScreen = ({ history }) => {
 
     //Recibe el parametro enviado en la url: www.../hero/id
     const params = useParams();
@@ -21,17 +21,17 @@ export const HeroScreen = ({history}) => {
 
 
     const handleReturn = () => {
-        
+
         //podemos usar
         //history.replace('./') o history.push('./')
         //tambien history.goBack(); que regresa a la pagina anterior visitada
 
         //si NO hay registro de la pagina anterior
-        if(history.length<=2){
+        if (history.length <= 2) {
             history.push('./');
         }
         //si hay registro de visita a la pagina anterior
-        else{
+        else {
             history.goBack();
         }
     }
